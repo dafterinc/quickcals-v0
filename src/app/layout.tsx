@@ -1,27 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Space_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
-import { Toaster } from "@/components/ui/sonner";
+import { ThemeProvider } from "@/components/theme-provider";
+import { AuthProvider } from "@/lib/auth/auth-context";
+import { Toaster } from "sonner";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const spaceMono = Space_Mono({
-  variable: "--font-space-mono",
-  weight: ["400", "700"],
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "QuickCals - Nutrition Tracking App",
-  description: "A modern nutrition tracking application",
+  title: "QuickCals - Nutrition & Fitness Tracking",
+  description: "Track calories, meals, and weight to achieve your fitness goals.",
 };
 
 export default function RootLayout({
@@ -32,28 +20,36 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            (function() {
-              try {
-                const savedTheme = localStorage.getItem('theme');
-                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                
-                if (savedTheme === 'dark' || (savedTheme !== 'light' && prefersDark)) {
-                  document.documentElement.classList.add('dark');
-                } else {
-                  document.documentElement.classList.remove('dark');
-                }
-              } catch (e) {}
-            })();
-          `
-        }} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  const storedTheme = localStorage.getItem('theme')
+                  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+                  
+                  if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
+                    document.documentElement.classList.add('dark')
+                    document.documentElement.style.colorScheme = 'dark'
+                  } else {
+                    document.documentElement.classList.remove('dark')
+                    document.documentElement.style.colorScheme = 'light'
+                  }
+                } catch (e) {}
+              })()
+            `,
+          }}
+        />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${spaceMono.variable} antialiased`}
-      >
-        {children}
-        <Toaster />
+      <body className={inter.className}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem storageKey="theme">
+          <AuthProvider>
+            <div className="min-h-screen">
+              {children}
+            </div>
+            <Toaster position="top-right" />
+          </AuthProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

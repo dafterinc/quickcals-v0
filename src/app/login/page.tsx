@@ -37,7 +37,8 @@ export default function Page() {
   // Handle tab change
   const handleTabChange = (value: string) => {
     setActiveTab(value)
-    router.push(value === "sign-up" ? "#sign-up" : "#login")
+    // Use replaceState instead of directly modifying location.hash to prevent page refresh
+    window.history.replaceState(null, '', value === "sign-up" ? "#sign-up" : "#login")
   }
 
   return (
