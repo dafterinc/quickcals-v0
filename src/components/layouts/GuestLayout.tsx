@@ -4,11 +4,14 @@ import React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { DarkModeToggle } from "@/components/ui/dark-mode-toggle";
+import { cn } from "@/lib/utils";
 
 export function GuestLayout({
   children,
+  fullWidth = false,
 }: {
   children: React.ReactNode;
+  fullWidth?: boolean;
 }) {
   return (
     <div className="flex min-h-screen flex-col">
@@ -31,7 +34,7 @@ export function GuestLayout({
         </div>
       </header>
       <main className="flex-1 flex justify-center">
-        <div className="w-full max-w-6xl">
+        <div className={cn("w-full", !fullWidth && "max-w-6xl")}>
           {children}
         </div>
       </main>
