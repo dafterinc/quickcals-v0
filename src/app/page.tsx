@@ -1,7 +1,5 @@
-import Image from "next/image";
-import { TestTailwind } from "@/components/ui/test-tailwind";
-import { ThemeShowcase } from "@/components/ui/theme-showcase";
 import { DarkModeToggle } from "@/components/ui/dark-mode-toggle";
+import { ExampleShowcase } from "@/components/ui/example-showcase";
 
 export default function Home() {
   return (
@@ -16,28 +14,7 @@ export default function Home() {
           <p className="text-muted-foreground mb-8">A modern nutrition tracking app</p>
         </div>
         
-        <TestTailwind />
-        
-        <ThemeShowcase />
-        
-        <div className="flex gap-4 items-center flex-col sm:flex-row mt-8">
-          <a
-            className="rounded-md border border-solid border-transparent transition-colors flex items-center justify-center bg-primary text-primary-foreground gap-2 hover:bg-primary/90 font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Get Started
-          </a>
-          <a
-            className="rounded-md border border-solid border-primary/20 transition-colors flex items-center justify-center hover:bg-primary/10 font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn More
-          </a>
-        </div>
+        <ExampleShowcase />
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center text-xs text-muted-foreground">
         <span>© 2023 QuickCals</span>
