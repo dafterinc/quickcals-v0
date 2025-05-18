@@ -20,7 +20,9 @@ export function MainLayout({
                 <span className="font-bold">QuickCals</span>
               </Link>
               <nav className="flex items-center space-x-4">
-                <Link href="/history">
+              <Link href="/dashboard">
+                  <Button variant="ghost" size="sm">Dashboard</Button>
+                </Link><Link href="/history">
                   <Button variant="ghost" size="sm">History</Button>
                 </Link>
                 <Link href="/profile">
