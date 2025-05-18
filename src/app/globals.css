@@ -87,41 +87,41 @@
   }
 
   .dark {
-    --background: oklch(25% 0.04 140); /* Dark green */
-    --foreground: oklch(95% 0.02 90); /* Light beige */
-    --card: oklch(30% 0.05 140); /* Slightly lighter dark green */
-    --card-foreground: oklch(95% 0.02 90); /* Light beige */
-    --popover: oklch(30% 0.05 140); /* Slightly lighter dark green */
-    --popover-foreground: oklch(95% 0.02 90); /* Light beige */
-    --primary: oklch(55% 0.10 150); /* Vibrant green */
-    --primary-foreground: oklch(15% 0.03 140); /* Very dark green */
-    --secondary: oklch(35% 0.04 140); /* Muted dark green */
-    --secondary-foreground: oklch(95% 0.02 90); /* Light beige */
-    --muted: oklch(35% 0.04 140); /* Muted dark green */
-    --muted-foreground: oklch(70% 0.05 130); /* Mid green-beige */
-    --accent: oklch(50% 0.08 150); /* Accent green for dark mode */
-    --accent-foreground: oklch(95% 0.02 90); /* Light beige */
-    --destructive: oklch(60% 0.18 30); /* Soft red */
-    --border: oklch(35% 0.03 140 / 30%); /* Dark border with opacity */
-    --input: oklch(35% 0.03 140 / 30%); /* Dark input with opacity */
-    --ring: oklch(55% 0.10 150 / 50%); /* Vibrant green ring with opacity */
+    --background: oklch(15% 0.03 140); /* Very dark green, almost black */
+    --foreground: oklch(95% 0.03 100); /* Light beige with slightly higher contrast */
+    --card: oklch(20% 0.04 140); /* Slightly lighter than background */
+    --card-foreground: oklch(98% 0.03 100); /* Bright light beige */
+    --popover: oklch(20% 0.04 140); /* Slightly lighter than background */
+    --popover-foreground: oklch(98% 0.03 100); /* Bright light beige */
+    --primary: oklch(60% 0.15 150); /* Brighter green */
+    --primary-foreground: oklch(98% 0.03 100); /* Changed to bright light beige for better tab contrast */
+    --secondary: oklch(25% 0.06 140); /* More saturated dark green */
+    --secondary-foreground: oklch(98% 0.03 100); /* Bright light beige */
+    --muted: oklch(25% 0.05 140); /* Slightly more saturated dark green */
+    --muted-foreground: oklch(80% 0.05 130); /* Lighter green-beige for better visibility */
+    --accent: oklch(45% 0.12 150); /* Darker accent green for better tab distinction */
+    --accent-foreground: oklch(98% 0.03 100); /* Bright light beige */
+    --destructive: oklch(65% 0.20 30); /* Brighter red for better visibility */
+    --border: oklch(35% 0.08 140); /* More visible border without transparency */
+    --input: oklch(25% 0.05 140); /* More visible input field */
+    --ring: oklch(60% 0.15 150 / 60%); /* Brighter ring with more opacity */
     
-    /* Dark mode chart colors */
-    --chart-1: oklch(55% 0.15 150);
-    --chart-2: oklch(60% 0.13 170);
-    --chart-3: oklch(65% 0.12 190);
-    --chart-4: oklch(70% 0.10 130);
-    --chart-5: oklch(75% 0.09 110);
+    /* Dark mode chart colors with more distinction */
+    --chart-1: oklch(60% 0.18 150);
+    --chart-2: oklch(65% 0.16 170);
+    --chart-3: oklch(70% 0.15 190);
+    --chart-4: oklch(75% 0.13 130);
+    --chart-5: oklch(80% 0.12 110);
     
     /* Dark mode sidebar colors */
-    --sidebar: oklch(30% 0.05 140);
-    --sidebar-foreground: oklch(95% 0.02 90);
-    --sidebar-primary: oklch(55% 0.10 150);
-    --sidebar-primary-foreground: oklch(15% 0.03 140);
-    --sidebar-accent: oklch(35% 0.04 140);
-    --sidebar-accent-foreground: oklch(95% 0.02 90);
-    --sidebar-border: oklch(35% 0.03 140 / 30%);
-    --sidebar-ring: oklch(55% 0.10 150 / 50%);
+    --sidebar: oklch(18% 0.04 140); /* Slightly lighter than background */
+    --sidebar-foreground: oklch(98% 0.03 100); /* Bright light beige */
+    --sidebar-primary: oklch(60% 0.15 150); /* Brighter green */
+    --sidebar-primary-foreground: oklch(98% 0.03 100); /* Changed to bright light beige */
+    --sidebar-accent: oklch(30% 0.08 140); /* More saturated accent */
+    --sidebar-accent-foreground: oklch(98% 0.03 100); /* Bright light beige */
+    --sidebar-border: oklch(35% 0.08 140); /* More visible border */
+    --sidebar-ring: oklch(60% 0.15 150 / 60%); /* Brighter ring with more opacity */
   }
 
   * {
