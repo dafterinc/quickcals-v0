@@ -19,19 +19,12 @@ export function GuestLayout({
               <Link href="/" className="mr-6 flex items-center space-x-2">
                 <span className="font-bold">QuickCals</span>
               </Link>
-              <nav className="flex items-center space-x-2">
-                <Link href="/style">
-                  <Button variant="ghost" size="sm">Style Guide</Button>
-                </Link>
-              </nav>
+              
             </div>
             <div className="flex flex-1 items-center justify-end gap-4">
               <DarkModeToggle />
               <Link href="/login">
-                <Button variant="outline" size="sm">Login</Button>
-              </Link>
-              <Link href="/signup">
-                <Button size="sm">Sign Up</Button>
+                <Button size="sm">Login/Sign Up</Button>
               </Link>
             </div>
           </div>

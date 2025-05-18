@@ -19,7 +19,7 @@ export default function Home() {
             Get precise nutritional information with minimal effort.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/signup">
+            <Link href="/login#sign-up">
               <Button size="lg" className="font-semibold px-8">
                 Start Free Trial
               </Button>
@@ -216,7 +216,7 @@ export default function Home() {
                   </ul>
                 </CardContent>
                 <CardFooter>
-                  <Link href="/signup" className="w-full">
+                  <Link href="/login#sign-up" className="w-full">
                     <Button className="w-full">Start Free Trial</Button>
                   </Link>
                 </CardFooter>
@@ -260,7 +260,7 @@ export default function Home() {
                   </ul>
                 </CardContent>
                 <CardFooter>
-                  <Link href="/signup" className="w-full">
+                  <Link href="/login#sign-up" className="w-full">
                     <Button className="w-full">Start Free Trial</Button>
                   </Link>
                 </CardFooter>
@@ -300,7 +300,7 @@ export default function Home() {
                   </ul>
                 </CardContent>
                 <CardFooter>
-                  <Link href="/signup" className="w-full">
+                  <Link href="/login#sign-up" className="w-full">
                     <Button className="w-full">Start Free Trial</Button>
                   </Link>
                 </CardFooter>
@@ -345,7 +345,7 @@ export default function Home() {
                   </ul>
                 </CardContent>
                 <CardFooter>
-                  <Link href="/signup" className="w-full">
+                  <Link href="/login#sign-up" className="w-full">
                     <Button className="w-full">Start Free Trial</Button>
                   </Link>
                 </CardFooter>
@@ -363,7 +363,7 @@ export default function Home() {
             Start your 14-day free trial today and experience the easiest, most accurate way to track your nutrition.
           </p>
           <div className="mt-10">
-            <Link href="/signup">
+            <Link href="/login#sign-up">
               <Button size="lg" className="font-semibold px-8">
                 Get Started Now
               </Button>

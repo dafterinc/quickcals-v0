@@ -48,7 +48,7 @@
   :root {
     --font-family-primary: var(--font-space-mono);
     
-    --radius: 0.625rem;
+    --radius: 0.5rem;
     --background: oklch(97% 0.01 110); /* Soft beige */
     --foreground: oklch(30% 0.03 130); /* Dark green */
     --card: oklch(98% 0.02 110); /* Lighter beige */
