@@ -15,11 +15,13 @@ export function ExampleShowcase() {
       <h2 className="text-2xl font-bold mb-6">QuickCals Component Showcase</h2>
       
       <Tabs defaultValue="meal-entry" className="w-full mb-8">
-        <TabsList className="grid w-full grid-cols-3">
-          <TabsTrigger value="meal-entry">Meal Entry</TabsTrigger>
-          <TabsTrigger value="history">History</TabsTrigger>
-          <TabsTrigger value="profile">Profile</TabsTrigger>
-        </TabsList>
+        <div className="flex justify-center w-full">
+          <TabsList className="grid w-full max-w-4xl grid-cols-3 overflow-hidden">
+            <TabsTrigger value="meal-entry">Meal Entry</TabsTrigger>
+            <TabsTrigger value="history">History</TabsTrigger>
+            <TabsTrigger value="profile">Profile</TabsTrigger>
+          </TabsList>
+        </div>
         
         <TabsContent value="meal-entry" className="space-y-4 mt-4">
           <Card>

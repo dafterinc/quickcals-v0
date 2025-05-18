@@ -4,7 +4,7 @@ import { QuickCalsComponents } from "@/components/ui/quickcals-components";
 
 export default function StylesheetPage() {
   return (
-    <div className="py-10">
+    <div className="py-10 px-4 sm:px-6 overflow-hidden">
       <div className="mb-8">
         <h1 className="text-3xl font-bold">QuickCals Stylesheet</h1>
         <p className="text-muted-foreground mt-1">
@@ -13,11 +13,13 @@ export default function StylesheetPage() {
       </div>
       
       <Tabs defaultValue="components" className="w-full">
-        <TabsList className="grid w-full max-w-md grid-cols-3">
-          <TabsTrigger value="components">UI Components</TabsTrigger>
-          <TabsTrigger value="quickcals">QuickCals Components</TabsTrigger>
-          <TabsTrigger value="guidelines">Guidelines</TabsTrigger>
-        </TabsList>
+        <div className="flex justify-center w-full">
+          <TabsList className="grid w-full max-w-6xl grid-cols-3 overflow-hidden">
+            <TabsTrigger value="components">UI Components</TabsTrigger>
+            <TabsTrigger value="quickcals">QuickCals Components</TabsTrigger>
+            <TabsTrigger value="guidelines">Guidelines</TabsTrigger>
+          </TabsList>
+        </div>
         
         <TabsContent value="components" className="mt-6">
           <ThemeShowcase />
